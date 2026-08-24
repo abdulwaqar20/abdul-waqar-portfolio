@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Waqar | AI & Machine Learning Engineer | Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Professional portfolio of Abdul Waqar, an AI and Machine Learning Engineer specializing in computer vision, natural language processing, and full-stack development.">
+  <meta name="keywords" content="Abdul Waqar, AI Engineer, Machine Learning Engineer, NLP, computer vision, YOLO, python, react native, NED University, portfolio">
+  <meta name="author" content="Abdul Waqar">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abdul Waqar | AI & Machine Learning Engineer">
+  <meta property="og:description" content="AI & Machine Learning Engineer specializing in Computer Vision, NLP, and Full Stack Development. BS CS graduate from NED University.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" id="logo">
+        <i data-lucide="brain-circuit"></i> Abdul<span>Waqar</span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link" id="link-about">About</a>
+        <a href="#skills" class="nav-link" id="link-skills">Skills</a>
+        <a href="#timeline" class="nav-link" id="link-timeline">Journey</a>
+        <a href="#projects" class="nav-link" id="link-projects">Projects</a>
+        <a href="#certs" class="nav-link" id="link-certs">Certifications</a>
+        <a href="#contact" class="nav-link" id="link-contact">Contact</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button class="burger-menu" id="burger-menu" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-subtitle">Welcome to my universe</span>
+        <h1 class="hero-title">Hi, I'm <span class="gradient-text">Abdul Waqar</span></h1>
+        <div class="hero-typing">
+          <span>I'm a&nbsp;</span><span class="typing-text" id="typing-element"></span>
+        </div>
+        <p class="hero-desc">
+          Passionate Artificial Intelligence graduate and Machine Learning Engineer. I build intelligent classifiers, computer vision applications, and responsive cross-platform systems that bridge data and user experiences.
+        </p>
+        
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">
+            View Work <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Let's Talk <i data-lucide="message-square" style="width: 18px; height: 18px;"></i>
+          </a>
+          <a
+            href="assets/Abdul_Waqar_Resume.pdf"
+            target="_blank"
+            class="btn btn-secondary"
+            style="gap: 8px;"
+          >
+            View Resume
+            <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-border-outer"></div>
+          <div class="avatar-border-inner"></div>
+          <div class="avatar-img-box">
+            <img src="assets/avatar.png" alt="Abdul Waqar Portrait">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Stats Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title" style="margin-bottom: 24px; display: block;">Engineering Intelligent Solutions</h2>
+          <p class="about-highlight">
+            BS Computer Science (Specialization in Artificial Intelligence) graduate from NED University of Engineering and Technology.
+          </p>
+          <p>
+            I have hands-on experience in Machine Learning, Deep Learning, Computer Vision, and Natural Language Processing. Having completed 4 internships, I have refined my skills in implementing classification models, real-time object detection systems (YOLO), content recommendation engines, and full-stack mobile applications using React Native and Firebase.
+          </p>
+          
+          <div class="about-details">
+            <div class="about-detail-item">
+              <div class="about-detail-icon"><i data-lucide="map-pin"></i></div>
+              <div class="about-detail-info">
+                <h4>Location</h4>
+                <p>Karachi, Pakistan</p>
+              </div>
+            </div>
+            <div class="about-detail-item">
+              <div class="about-detail-icon"><i data-lucide="mail"></i></div>
+              <div class="about-detail-info">
+                <h4>Email</h4>
+                <p><a href="mailto:abdulwaqarmangrio@gmail.com" class="gradient-text">abdulwaqarmangrio@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="about-detail-item">
+              <div class="about-detail-icon"><i data-lucide="phone"></i></div>
+              <div class="about-detail-info">
+                <h4>Phone</h4>
+                <p>+92 310 3323825</p>
+              </div>
+            </div>
+            <div class="about-detail-item">
+              <div class="about-detail-icon"><i data-lucide="award"></i></div>
+              <div class="about-detail-info">
+                <h4>Status</h4>
+                <p>Certified GenAI Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="stats-grid reveal">
+          <div class="stat-card glass-card">
+            <div class="stat-number gradient-text" data-target="4">0</div>
+            <div class="stat-label">Completed Internships</div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number gradient-text" data-target="4">0</div>
+            <div class="stat-label">Core AI Projects</div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number gradient-text" data-target="3.17" data-decimals="2">0</div>
+            <div class="stat-label">University CGPA</div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number" style="color: var(--accent);" data-target="3">0</div>
+            <div class="stat-label">Professional Certs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Skills Inventory</span>
+        <h2 class="section-title">My Technical Capabilities</h2>
+      </div>
+      
+      <div class="skills-grid">
+        <!-- Machine Learning -->
+        <div class="skill-category glass-card reveal">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i data-lucide="cpu"></i></div>
+            <h3 class="skill-category-title">Machine Learning</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Deep Learning & NLP</span><span class="skill-percent">85%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Computer Vision (YOLO/OpenCV)</span><span class="skill-percent">90%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Scikit-learn & Classification</span><span class="skill-percent">88%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Data Mining & Preprocessing</span><span class="skill-percent">82%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="82%"></div></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Languages & Frameworks -->
+        <div class="skill-category glass-card reveal">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i data-lucide="code-2"></i></div>
+            <h3 class="skill-category-title">Languages & Frameworks</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Python</span><span class="skill-percent">92%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">React Native & Node.js</span><span class="skill-percent">85%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">SQL (Database Management)</span><span class="skill-percent">80%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">C / C++ / Streamlit</span><span class="skill-percent">78%</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" data-progress="78%"></div></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tools & Cloud / Core Competencies -->
+        <div class="skill-category glass-card reveal">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i data-lucide="layers"></i></div>
+            <h3 class="skill-category-title">Tools & Core Skills</h3>
+          </div>
+          <div style="margin-bottom: 24px;">
+            <h4 style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 700; text-transform: uppercase;">Tools & Ecosystem</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Groq API</span>
+              <span class="skill-tag">LLaMA 3.1</span>
+            </div>
+          </div>
+          <div>
+            <h4 style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 700; text-transform: uppercase;">Core Competencies</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Team Collaboration</span>
+              <span class="skill-tag">Data Cleaning</span>
+              <span class="skill-tag">Analytical Thinking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section (Timeline of Experience & Education) -->
+  <section class="section" id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career & Study</span>
+        <h2 class="section-title">My Professional Journey</h2>
+      </div>
+      
+      <div class="timeline-tabs">
+        <button class="tab-btn active" id="tab-experience" onclick="switchTimeline('experience')">Work Experience</button>
+        <button class="tab-btn" id="tab-education" onclick="switchTimeline('education')">Education</button>
+      </div>
+      
+      <div class="timeline-wrapper reveal">
+        <!-- Experience Timeline -->
+        <div class="timeline-container active" id="timeline-experience">
+          <!-- KDA -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">IT Department Intern</h3>
+                  <div class="timeline-org">Karachi Development Authority (KDA)</div>
+                </div>
+                <div>
+                  <span class="timeline-date">Mar 2025 - Apr 2025</span>
+                  <div class="timeline-loc"><i data-lucide="map-pin" style="width:12px;"></i> Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div class="timeline-desc">
+                <ul>
+                  <li>Handled technical tasks and IT operations within the KDA Information Technology Department.</li>
+                  <li>Supported daily departmental functions and critical system maintenance alongside the IT infrastructure team.</li>
+                  <li>Received official recognition for outstanding, capable, and responsible performance throughout the term.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- NIKUD -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">React Native & Full Stack Intern</h3>
+                  <div class="timeline-org">NIKUD</div>
+                </div>
+                <div>
+                  <span class="timeline-date">Jul 2025 - Aug 2025</span>
+                  <div class="timeline-loc"><i data-lucide="map-pin" style="width:12px;"></i> Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div class="timeline-desc">
+                <ul>
+                  <li>Developed a cross-platform mobile application using React Native and Firebase for iOS and Android.</li>
+                  <li>Built an interactive Admin Dashboard using Node.js for real-time data visualization and user management metrics.</li>
+                  <li>Integrated RESTful API communication between the mobile clients and the centralized dashboard database.</li>
+                  <li>Implemented Firebase Authentication and Realtime Database setups for enhanced app responsiveness and data security.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- PIA -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">React Native Intern</h3>
+                  <div class="timeline-org">Pakistan International Airlines (PIA)</div>
+                </div>
+                <div>
+                  <span class="timeline-date">Aug 2024 - Sep 2024</span>
+                  <div class="timeline-loc"><i data-lucide="map-pin" style="width:12px;"></i> Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div class="timeline-desc">
+                <ul>
+                  <li>Developed multi-screen responsive mobile applications using React Native UI elements and Firebase.</li>
+                  <li>Implemented cloud database listeners and real-time syncing for seamless performance.</li>
+                  <li>Collaborated closely with senior developers to debug, profile, and optimize source code, contributing to a significant reduction in application crashes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- PCSIR -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Data Analyst Intern</h3>
+                  <div class="timeline-org">Pakistan Council of Scientific and Industrial Research (PCSIR)</div>
+                </div>
+                <div>
+                  <span class="timeline-date">Sep 2023 - Oct 2023</span>
+                  <div class="timeline-loc"><i data-lucide="map-pin" style="width:12px;"></i> Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div class="timeline-desc">
+                <ul>
+                  <li>Performed comprehensive data cleaning and statistical preprocessing on large research datasets.</li>
+                  <li>Addressed structural discrepancies, resolved missing values, and corrected data inconsistencies.</li>
+                  <li>Improved decision accuracy through validation methodologies, outlier detection, and data mining workflows.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Education Timeline -->
+        <div class="timeline-container" id="timeline-education">
+          <!-- University -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Bachelor of Computer Science</h3>
+                  <div class="timeline-org">NED University of Engineering and Technology</div>
+                </div>
+                <div>
+                  <span class="timeline-date">2022 - 2026</span>
+                  <div class="timeline-loc"><i data-lucide="map-pin" style="width:12px;"></i> Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div class="timeline-desc">
+                <p><strong>Specialization:</strong> Artificial Intelligence</p>
+                <p style="margin-top: 8px;"><strong>CGPA:</strong> 3.17</p>
+                <p style="margin-top: 8px;">Studied foundational and advanced coursework including Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Algorithms, and Software Engineering.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Intermediate -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Intermediate (Pre-Engineering)</h3>
+                  <div class="timeline-org">Govt. Degree Science/Commerce College, Gulshan-e-Iqbal</div>
+                </div>
+                <div>
+                  <span class="timeline-date">2020 - 2022</span>
+                  <div class="timeline-loc"><i data-lucide="map-pin" style="width:12px;"></i> Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div class="timeline-desc">
+                <p><strong>Percentage achieved:</strong> 81.09%</p>
+                <p style="margin-top: 8px;">Focused studies in Mathematics, Physics, and Chemistry, laying a solid mathematical foundation for AI studies.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Matriculation -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Matriculation (Science)</h3>
+                  <div class="timeline-org">Everest Grammar High School</div>
+                </div>
+                <div>
+                  <span class="timeline-date">2018 - 2020</span>
+                  <div class="timeline-loc"><i data-lucide="map-pin" style="width:12px;"></i> Karachi, Pakistan</div>
+                </div>
+              </div>
+              <div class="timeline-desc">
+                <p><strong>Percentage achieved:</strong> 82.50%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Showcase</span>
+        <h2 class="section-title">AI & Software Projects</h2>
+      </div>
+      
+      <!-- Portfolio Controls -->
+      <div class="portfolio-controls reveal">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+          <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        </div>
+        
+        <div class="search-box">
+          <input type="text" class="search-input" id="project-search" placeholder="Search by name or tech...">
+          <i data-lucide="search" class="search-icon" style="width: 18px; height: 18px;"></i>
+        </div>
+      </div>
+      
+      <!-- Projects Grid -->
+      <div class="projects-grid reveal">
+        <!-- Smart Park -->
+        <div class="project-card glass-card" data-category="cv" data-index="1">
+          <div class="project-img-box">
+            <img src="assets/smart_park.png" alt="Smart Park Object Detection">
+            <div class="project-overlay">
+              <span class="project-overlay-btn">View Project Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Smart Park - Object Detection</h3>
+            <p class="project-desc">
+              Built a real-time parking space monitoring system using YOLO to classify filled and empty spaces in images and video feeds.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">YOLO</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hate Speech -->
+        <div class="project-card glass-card" data-category="ai-ml" data-index="0">
+          <div class="project-img-box">
+            <img src="assets/hate_speech.png" alt="Hate Speech Detection">
+            <div class="project-overlay">
+              <span class="project-overlay-btn">View Project Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Hate Speech & Cyberbullying Detection</h3>
+            <p class="project-desc">
+              Built an AI classifier for Hate Speech, Cyberbullying, or Neutral text using TF-IDF and Logistic Regression (82% accuracy, 93.8% precision for hate speech).
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">NLP</span>
+              <span class="project-tag">Scikit-learn</span>
+              <span class="project-tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+                
+        <!-- Library Recommendation -->
+        <div class="project-card glass-card" data-category="ai-ml" data-index="2">
+          <div class="project-img-box">
+            <img src="assets/library.png" alt="Library Recommendation System">
+            <div class="project-overlay">
+              <span class="project-overlay-btn">View Project Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Library Recommendation System</h3>
+            <p class="project-desc">
+              Built a content-based book recommendation engine using TF-IDF vectorization and cosine similarity on book descriptions.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">NLP</span>
+              <span class="project-tag">TF-IDF</span>
+              <span class="project-tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- General Health Chatbot -->
+        <div class="project-card glass-card" data-category="ai-ml" data-index="5">
+          <div class="project-img-box">
+            <img src="assets/chatbot.png" alt="General Health Chatbot">
+            <div class="project-overlay">
+              <span class="project-overlay-btn">View Project Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">General Health Query Chatbot</h3>
+            <p class="project-desc">
+              Built an interactive conversational command-line chatbot using LLaMA 3.1 LLM via Groq API.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Groq API</span>
+              <span class="project-tag">LLaMA 3.1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Languages Section -->
+  <section class="section" id="certs">
+    <div class="container">
+      <div class="cert-lang-grid">
+        <!-- Certifications -->
+        <div class="reveal">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title" style="margin-bottom: 32px; display: block;">Certifications & Achievements</h2>
+          <div class="certifications-list">
+          <!-- Cert 1 -->
+          <div class="cert-card glass-card">
+            <div class="cert-info">
+              <h3>Generative AI Application Developer Training</h3>
+              <p class="cert-issuer">NCEAC-HEC (iCodeGuru, PakAngels, Aspire Pakistan, UETIANS Lahore)</p>
+              <span class="cert-date">Year: 2026</span>
+            </div>
+            <a href="https://drive.google.com/file/d/1CYM1V5nQDgY78nvlY6s30NyyoFOv3yOE/view?usp=sharing" target="_blank" class="cert-view-btn">View Certificate</a>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card glass-card">
+            <div class="cert-info">
+              <h3>Python Programming</h3>
+              <p class="cert-issuer">edX Platform</p>
+              <span class="cert-date">Year: 2025</span>
+            </div>
+            <a href="https://drive.google.com/file/d/1g_FOnfrJmEPAe1ger2MuE8_prqVfdT-p/view?usp=sharing" target="_blank" class="cert-view-btn">View Certificate</a>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card glass-card">
+            <div class="cert-info">
+              <h3>Indus AI Week participant</h3>
+              <p class="cert-issuer">National Youth Leaders Program (NYLP)</p>
+              <span class="cert-date">Feb 2026 • 3-day Conference</span>
+            </div>
+            <a href="https://drive.google.com/file/d/19CZVmaJY27Nsizk6BRKf-ntveB5qvE3K/view?usp=sharing" target="_blank" class="cert-view-btn">View Certificate</a>
+          </div>
+        </div>
+        </div>
+        
+        <!-- Languages -->
+        <div class="reveal">
+          <span class="section-tag">Communication</span>
+          <h2 class="section-title" style="margin-bottom: 32px; display: block;">Language Proficiencies</h2>
+          <div class="languages-box glass-card">
+            <div class="lang-grid">
+              <!-- Urdu -->
+              <div class="lang-item">
+                <div class="lang-circle" data-percent="100">
+                  <svg>
+                    <circle class="circle-bg" cx="35" cy="35" r="32"></circle>
+                    <circle class="circle-progress" cx="35" cy="35" r="32"></circle>
+                  </svg>
+                  <span class="lang-percentage">100%</span>
+                </div>
+                <div class="lang-info">
+                  <h4>Urdu</h4>
+                  <p>Native / Mother tongue proficiency</p>
+                </div>
+              </div>
+              
+              <!-- Sindhi -->
+              <div class="lang-item">
+                <div class="lang-circle" data-percent="100">
+                  <svg>
+                    <circle class="circle-bg" cx="35" cy="35" r="32"></circle>
+                    <circle class="circle-progress" cx="35" cy="35" r="32"></circle>
+                  </svg>
+                  <span class="lang-percentage">100%</span>
+                </div>
+                <div class="lang-info">
+                  <h4>Sindhi</h4>
+                  <p>Native / Mother tongue proficiency</p>
+                </div>
+              </div>
+              
+              <!-- English -->
+              <div class="lang-item">
+                <div class="lang-circle" data-percent="75">
+                  <svg>
+                    <circle class="circle-bg" cx="35" cy="35" r="32"></circle>
+                    <circle class="circle-progress" cx="35" cy="35" r="32"></circle>
+                  </svg>
+                  <span class="lang-percentage">75%</span>
+                </div>
+                <div class="lang-info">
+                  <h4>English</h4>
+                  <p>Intermediate professional communication</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact & Networks</h2>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info-cards reveal">
+          <span class="section-tag">Get in Touch</span>
+          <!-- Email Card -->
+          <div class="contact-card glass-card">
+            <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+            <div class="contact-details">
+              <h4>Direct Email</h4>
+              <p><a href="mailto:abdulwaqarmangrio@gmail.com">abdulwaqarmangrio@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <!-- Phone Card -->
+          <div class="contact-card glass-card">
+            <div class="contact-icon-box"><i data-lucide="phone"></i></div>
+            <div class="contact-details">
+              <h4>Call / WhatsApp</h4>
+              <p>+92 310 3323825</p>
+            </div>
+          </div>
+          
+          <!-- Location Card -->
+          <div class="contact-card glass-card">
+            <div class="contact-icon-box"><i data-lucide="map-pin"></i></div>
+            <div class="contact-details">
+              <h4>Base Location</h4>
+              <p>Karachi, Pakistan</p>
+            </div>
+          </div>
+          
+          <!-- Social links -->
+          <div class="contact-socials">
+            <a href="https://github.com/abdulwaqar20" class="social-btn" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.2.66.79.55C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+            </a>
+            <a href="mailto:abdulwaqarmangrio@gmail.com" class="social-btn" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="https://linkedin.com/in/abdul-waqar-3a1157271" target="_blank" class="social-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+            <a href="tel:+923103323825" class="social-btn" aria-label="Phone">
+              <i data-lucide="phone"></i>
+            </a>
+          </div>
+        </div>
+        
+          <!-- Contact Form -->
+          <div class="contact-form-box glass-card reveal">
+            <h3 class="form-title">Send a Message</h3>
+            <form id="contact-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    id="form-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="John Doe"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="form-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="john@example.com"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="form-group full-width" style="margin-bottom: 20px;">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  id="form-subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Project Inquiry / Job Opportunity"
+                  required
+                >
+              </div>
+
+              <div class="form-group full-width" style="margin-bottom: 24px;">
+                <label for="form-message" class="form-label">
+                  Message Content
+                </label>
+                <textarea
+                  id="form-message"
+                  name="message"
+                  class="form-input"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary form-btn"
+                id="submit-btn"
+              >
+                Send Message
+                <i data-lucide="send" style="width:16px;"></i>
+              </button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Abdul Waqar. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal" id="project-modal">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-content glass-card">
+      <button class="modal-close" onclick="closeModal()"><i data-lucide="x"></i></button>
+      <div class="modal-img-box">
+        <img id="modal-img" src="" alt="Project Image">
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title" id="modal-title">Project Title</h2>
+        <div class="modal-subtitle" id="modal-tags">Tech Tags</div>
+        
+        <div class="modal-section-title">Overview</div>
+        <p class="modal-desc" id="modal-desc">Detailed project description goes here.</p>
+        
+        <div class="modal-section-title">Key Accomplishments</div>
+        <ul class="modal-highlights" id="modal-highlights">
+          <!-- Dynamically populated -->
+        </ul>
+        
+        <div class="modal-footer">
+          <div class="modal-links">
+            <a href="https://github.com/abdulwaqar20" target="_blank" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">
+              <i data-lucide="github" style="width: 16px;"></i> View Repository
+            </a>
+            <a href="#" class="btn btn-secondary" id="modal-demo-btn" style="padding: 10px 20px; font-size: 0.9rem;">
+              <i data-lucide="external-link" style="width: 16px;"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
