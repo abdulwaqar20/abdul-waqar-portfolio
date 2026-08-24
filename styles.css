@@ -1447,6 +1447,8 @@ textarea.form-input {
   position: absolute;
   inset: 0;
   background: rgba(8, 12, 22, 0.8);
+
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -1614,6 +1616,16 @@ textarea.form-input {
 .toast-text {
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+.repository-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.display-btn {
+  width: 18px; 
+  height: 18px;
 }
 
 /* Responsive Media Queries */
