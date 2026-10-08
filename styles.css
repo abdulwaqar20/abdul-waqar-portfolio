@@ -1127,6 +1127,7 @@ input, textarea, button {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
+  align-items: start;
 }
 
 .certifications-list {
@@ -1185,8 +1186,6 @@ input, textarea, button {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
 }
 
 .lang-grid {

@@ -11,7 +11,7 @@ const projectsData = [
       "Combined standard machine learning inference with rule-based keyword filters to handle low-confidence boundary predictions.",
       "Developed a custom Streamlit web interface with real-time text analysis, confidence meters, and interactive confusion matrices."
     ],
-    demoLink: "#"
+    repoLink: "https://github.com/abdulwaqar20/Hate-Speech-And-Cyber-Bullying-Detection"
   },
   {
     title: "Smart Park - Object Detection",
@@ -24,7 +24,7 @@ const projectsData = [
       "Implemented confidence threshold tuning and color-coded green (free) and red (occupied) bounding boxes.",
       "Created a Streamlit interface supporting media file uploads and real-time inference displays."
     ],
-    demoLink: "#"
+    repoLink: "https://github.com/abdulwaqar20/Smart-Park"
   },
   {
     title: "Library Recommendation System",
@@ -37,20 +37,35 @@ const projectsData = [
       "Integrated fuzzy string matching algorithms to handle typos and spelling mistakes in user search queries.",
       "Embedded Plotly charts in a Streamlit web application to visualize recommendations and group ratings."
     ],
-    demoLink: "#"
+    repoLink: "https://github.com/abdulwaqar20/Library-Recommendation-System"
   },
-  {
+    {
     title: "General Health Query Chatbot",
     category: "ai-ml",
-    tags: ["Python", "Groq API", "LLaMA 3.1"],
+    tags: ["Python", "Groq API", "GPT-OSS 20B", "Streamlit"],
     image: "assets/chatbot.png",
-    description: "Developed an interactive command-line assistant using advanced prompt engineering and modern LLMs to answer health queries safely.",
+    description: "A conversational health information assistant built with Groq's GPT-OSS 20B and a Streamlit interface. It gives general educational answers on common health topics, with safety rules that prevent diagnosis and personalized treatment advice.",
     highlights: [
-      "Connected local python console clients to LLaMA 3.1 LLM endpoints via the Groq cloud API.",
-      "Applied strict system prompt constraints to ensure helpful responses while filtering out self-diagnoses.",
-      "Designed clean multi-turn conversational loops with input formatting."
+      "Built a multi-turn Streamlit chat app with session conversation history, powered by GPT-OSS 20B through the Groq API.",
+      "Engineered a safety-focused system prompt that avoids diagnosis, blocks personalized medication advice, and flags emergency symptoms.",
+      "Added self-harm safety handling that refuses method requests and gives supportive guidance instead.",
+      "Appended the medical disclaimer in Python code rather than relying on the LLM, so every response includes it."
     ],
-    demoLink: "#"
+    repoLink: "https://github.com/abdulwaqar20/General-Health-Query-Chatbot"
+  },
+  {
+    title: "Smart Patient Care",
+    category: "ai-ml",
+    tags: ["Python", "LLM", "RAG", "MIMIC-IV"],
+    image: "assets/smart_patient_care.png",
+    description: "Built during the 48-hour SGTDP Hackathon 2026 by Sofstica Solutions. A structured patient timeline and evidence retrieval system on the MIMIC-IV Clinical Database Demo v2.2, designed so the AI answers from reliable data instead of making things up.",
+    highlights: [
+      "Displays a patient's full hospital timeline in one place, with patient-specific chat history for continued conversations.",
+      "Answers plain-English questions about patient records by retrieving data first, then generating the response from that evidence.",
+      "Traces every answer back to the exact source table, field, and row for full transparency.",
+      "Built solo in 48 hours, focusing on system design, data flow, testing, and reliability."
+    ],
+    repoLink: "https://github.com/abdulwaqar20/Smart-Patient-Care"
   }
 ];
 
@@ -367,6 +382,11 @@ function openModal(index) {
   const demoBtn = document.getElementById("modal-demo-btn");
   if (demoBtn) {
     demoBtn.href = proj.demoLink;
+  }
+
+  const repoBtn = document.getElementById("modal-repo-btn");
+  if (repoBtn) {
+    repoBtn.href = proj.repoLink || "https://github.com/abdulwaqar20";
   }
   
   modal.classList.add("active");
