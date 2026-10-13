@@ -1122,6 +1122,22 @@ input, textarea, button {
   color: var(--text-muted);
 }
 
+.project-card.extra-hidden { display: none !important; }
+
+.view-more-wrap { text-align: center; margin-top: 2rem; }
+
+.view-more-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.view-more-btn:hover { transform: translateY(-2px); opacity: .85; }
+
 /* Certifications & Languages */
 .cert-lang-grid {
   display: grid;

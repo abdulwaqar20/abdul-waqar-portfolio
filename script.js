@@ -1,6 +1,48 @@
 // Project data source
 const projectsData = [
   {
+    title: "PolicyPilot - Employee Policy Q&A (RAG)",
+    category: "llm",
+    tags: ["Python", "RAG", "ChromaDB", "Mistral", "Streamlit"],
+    image: "assets/policypilot.png",
+    description: "A RAG chatbot that answers employee questions only from company policy documents, cites the source policy, and refuses when the documents don't cover the question instead of guessing.",
+    highlights: [
+      "Chunked and embedded policy PDFs with mistral-embed into a persistent Chroma database, using a similarity threshold to separate relevant from loosely related results.",
+      "Added multi-turn memory, response caching, retry with backoff and structured JSON query logging.",
+      "Wrote a 27-case evaluation harness (in-scope, multi-turn, refusal, safety) that caught real retrieval and scope bugs.",
+      "Built a Streamlit UI with source-citation badges, live session stats and Markdown transcript export."
+    ],
+    repoLink: "https://github.com/abdulwaqar20/Policy-Pilot"
+  },
+  {
+    title: "Multi-Agent Blog Writer",
+    category: "llm",
+    tags: ["Python", "LangGraph", "Groq API", "FastAPI", "Docker"],
+    image: "assets/blog_agents.png",
+    description: "A LangGraph workflow where a planner, worker and reviewer agent write a blog post together. The reviewer approves the draft or sends it back for fixes.",
+    highlights: [
+      "Built a planner, worker and reviewer graph with a conditional edge that retries rejected drafts, capped at 2 retries.",
+      "Handled the failure path: after two rejections, the run stops and returns the last draft marked as not approved.",
+      "Built a real-time FastAPI dashboard that streams each agent step, reviewer feedback, retry count and final status.",
+      "Containerised with Docker for deployment."
+    ],
+    repoLink: "https://github.com/abdulwaqar20/Blog-Agents"
+  },
+  {
+    title: "Tool-Using Research Agent",
+    category: "llm",
+    tags: ["Python", "Groq API", "GPT-OSS 120B", "Tool Calling"],
+    image: "assets/research_agent.png",
+    description: "An agent that answers research questions by choosing between web search, page fetch and summarise tools, with a hard step budget so it cannot loop forever.",
+    highlights: [
+      "Built a tool-calling loop where the model decides what to call next, with a step budget enforced by the code itself.",
+      "Tracked sources (S1, S2...) and rejected repeated fetches of the same URL before any network call.",
+      "Restricted answers to facts from fetched pages, and made the model state gaps instead of guessing.",
+      "Handled failures with tools that return structured results and a retry around malformed tool calls."
+    ],
+    repoLink: "https://github.com/abdulwaqar20/Research-Agent"
+  },
+  {
     title: "Hate Speech & Cyberbullying Detection",
     category: "ai-ml",
     tags: ["Python", "NLP", "Scikit-learn", "Streamlit"],
@@ -583,3 +625,36 @@ function showToast(message) {
     }, 400);
   }, 4000);
 }
+
+(function () {
+  const LIMIT = 3;
+  const grid = document.querySelector('.projects-grid');
+  const btn = document.getElementById('viewMoreBtn');
+  if (!grid || !btn) return;
+  let expanded = false;
+
+  function isFiltered(card) {
+    return card.style.display === 'none' || card.classList.contains('hidden');
+  }
+
+  function applyLimit() {
+    const cards = [...grid.querySelectorAll('.project-card')].filter(c => !isFiltered(c));
+    cards.forEach((c, i) => c.classList.toggle('extra-hidden', !expanded && i >= LIMIT));
+    btn.parentElement.style.display = cards.length > LIMIT ? '' : 'none';
+    btn.textContent = expanded ? 'Show Less' : 'View More Projects';
+    btn.setAttribute('aria-expanded', expanded);
+  }
+
+  btn.addEventListener('click', () => {
+    expanded = !expanded;
+    applyLimit();
+    if (!expanded) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Re-apply after a category filter changes
+  document.querySelectorAll('[data-filter]').forEach(b =>
+    b.addEventListener('click', () => setTimeout(applyLimit, 0))
+  );
+
+  applyLimit();
+})();

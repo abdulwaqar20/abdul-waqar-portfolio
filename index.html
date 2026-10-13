@@ -475,6 +475,7 @@
           <button class="filter-btn active" data-filter="all">All Projects</button>
           <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
           <button class="filter-btn" data-filter="cv">Computer Vision</button>
+          <button class="filter-btn" data-filter="llm">LLM/Agents</button>
         </div>
         
         <div class="search-box">
@@ -485,8 +486,30 @@
       
       <!-- Projects Grid -->
       <div class="projects-grid reveal">
+        <!-- PolicyPilot -->
+        <div class="project-card glass-card" data-category="llm" data-index="0">
+          <div class="project-img-box">
+            <img src="assets/policypilot.png" alt="PolicyPilot Employee Policy Q&A">
+            <div class="project-overlay">
+              <span class="project-overlay-btn">View Project Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">PolicyPilot - Employee Policy Q&amp;A (RAG)</h3>
+            <p class="project-desc">
+              Built a RAG chatbot that answers only from company policy documents, cites the source policy, and refuses when the documents don't cover the question.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">RAG</span>
+              <span class="project-tag">ChromaDB</span>
+              <span class="project-tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Smart Patient Care -->
-        <div class="project-card glass-card" data-category="ai-ml" data-index="4">
+        <div class="project-card glass-card" data-category="ai-ml" data-index="7">
           <div class="project-img-box">
             <img src="assets/smart_patient_care.png" alt="Smart Patient Care">
             <div class="project-overlay">
@@ -507,8 +530,52 @@
           </div>
         </div>
 
+        <!-- Multi-Agent Blog Writer -->
+        <div class="project-card glass-card" data-category="llm" data-index="1">
+          <div class="project-img-box">
+            <img src="assets/blog_agents.png" alt="Multi-Agent Blog Writer">
+            <div class="project-overlay">
+              <span class="project-overlay-btn">View Project Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Multi-Agent Blog Writer</h3>
+            <p class="project-desc">
+              Built a LangGraph workflow where planner, worker and reviewer agents write a blog post, with retries capped at 2 and a real-time FastAPI dashboard.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">LangGraph</span>
+              <span class="project-tag">Groq API</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool-Using Research Agent -->
+        <div class="project-card glass-card" data-category="llm" data-index="2">
+          <div class="project-img-box">
+            <img src="assets/research_agent.png" alt="Tool-Using Research Agent">
+            <div class="project-overlay">
+              <span class="project-overlay-btn">View Project Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Tool-Using Research Agent</h3>
+            <p class="project-desc">
+              Built an agent that picks between web search, page fetch and summarise tools, with a step budget, source tracking and answers limited to fetched facts.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Tool Calling</span>
+              <span class="project-tag">GPT-OSS 120B</span>
+              <span class="project-tag">Groq API</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Smart Park -->
-        <div class="project-card glass-card" data-category="cv" data-index="1">
+        <div class="project-card glass-card" data-category="cv" data-index="4">
           <div class="project-img-box">
             <img src="assets/smart_park.png" alt="Smart Park Object Detection">
             <div class="project-overlay">
@@ -530,7 +597,7 @@
         </div>
 
         <!-- Hate Speech -->
-        <div class="project-card glass-card" data-category="ai-ml" data-index="0">
+        <div class="project-card glass-card" data-category="ai-ml" data-index="3">
           <div class="project-img-box">
             <img src="assets/hate_speech.png" alt="Hate Speech Detection">
             <div class="project-overlay">
@@ -552,7 +619,7 @@
         </div>
                 
         <!-- Library Recommendation -->
-        <div class="project-card glass-card" data-category="ai-ml" data-index="2">
+        <div class="project-card glass-card" data-category="ai-ml" data-index="5">
           <div class="project-img-box">
             <img src="assets/library.png" alt="Library Recommendation System">
             <div class="project-overlay">
@@ -574,7 +641,7 @@
         </div>
         
         <!-- General Health Query Chatbot -->
-        <div class="project-card glass-card" data-category="ai-ml" data-index="3">
+        <div class="project-card glass-card" data-category="ai-ml" data-index="6">
           <div class="project-img-box">
             <img src="assets/chatbot.png" alt="General Health Query Chatbot">
             <div class="project-overlay">
@@ -594,6 +661,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="view-more-wrap">
+        <button id="viewMoreBtn" class="view-more-btn" type="button" aria-expanded="false">View More Projects</button>
       </div>
     </div>
   </section>
