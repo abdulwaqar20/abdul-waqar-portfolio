@@ -14,17 +14,17 @@ const projectsData = [
     ],
     repoLink: "https://github.com/abdulwaqar20/Policy-Pilot"
   },
-  {
+    {
     title: "Multi-Agent Blog Writer",
     category: "llm",
-    tags: ["Python", "LangGraph", "Groq API", "FastAPI", "Docker"],
+    tags: ["Python", "LangGraph", "Groq API", "FastAPI"],
     image: "assets/blog_agents.png",
-    description: "A LangGraph workflow where a planner, worker and reviewer agent write a blog post together. The reviewer approves the draft or sends it back for fixes.",
+    description: "A LangGraph workflow where a planner, a worker and a reviewer agent write a blog post together. The reviewer approves the draft or sends it back for fixes, up to 2 times, and a live dashboard shows every step.",
     highlights: [
-      "Built a planner, worker and reviewer graph with a conditional edge that retries rejected drafts, capped at 2 retries.",
-      "Handled the failure path: after two rejections, the run stops and returns the last draft marked as not approved.",
-      "Built a real-time FastAPI dashboard that streams each agent step, reviewer feedback, retry count and final status.",
-      "Containerised with Docker for deployment."
+      "Built a planner, worker and reviewer graph with shared state (topic, outline, draft, feedback, retries, approved).",
+      "Added a conditional edge: approved drafts end the run, rejected ones go back to the worker while retries are under 2.",
+      "Handled the failure path: after two rejections the run stops and returns the last draft marked as not approved, and a strict-reviewer mode lets me test it.",
+      "Built a live FastAPI dashboard that streams each node and shows the outline, draft, reviewer feedback, retry count, final status and the graph."
     ],
     repoLink: "https://github.com/abdulwaqar20/Blog-Agents"
   },
