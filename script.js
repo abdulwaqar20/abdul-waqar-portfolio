@@ -108,6 +108,36 @@ const projectsData = [
       "Built solo in 48 hours, focusing on system design, data flow, testing, and reliability."
     ],
     repoLink: "https://github.com/abdulwaqar20/Smart-Patient-Care"
+  },
+  {
+    title: "GPT-2 From Scratch",
+    category: "llm",
+    tags: ["Python", "NumPy", "Transformers", "Backpropagation"],
+    image: "assets/gpt2.png",
+    description: "A GPT-2 style transformer built entirely in NumPy, including the manual backward pass and AdamW optimizer, to understand how language models work internally.",
+    highlights: [
+      "Implemented tokenization, embeddings, masked multi-head attention, LayerNorm, feed-forward blocks and residual connections by hand.",
+      "Wrote backpropagation through every layer, plus cross-entropy loss and the AdamW optimizer.",
+      "Trained a character-level model (loss 3.29 to about 0.13) and added autoregressive generation with temperature and sampling.",
+      "Documented limitations honestly: tiny dataset, so the model memorises rather than generalises."
+    ],
+    repoLink: "https://github.com/abdulwaqar20/GPT2-From-Scratch"
+  },
+    {
+    title: "KisaanAI - Multi-Agent Crop Doctor",
+    category: "llm",
+    tags: ["Python", "FastAPI", "Groq", "RAG", "Urdu TTS"],
+    image: "assets/kisaanai.png",
+    description: "A multi-agent crop doctor for Pakistani farmers. The farmer sends a leaf photo and an Urdu voice note, and five agents diagnose the problem, look up sourced treatments, verify them for safety and weather, and reply in spoken Urdu.",
+    highlights: [
+      "Built a 5-agent pipeline (listener, diagnosis, research, verifier, advisor) using Whisper, gpt-oss-120b and a Qwen vision model through Groq.",
+      "Diagnosis uses a 2-3 run majority vote and asks for a clearer photo when unsure, instead of guessing a disease.",
+      "Designed a fail-closed verifier: banned-pesticide list, code-based grounding of doses and ingredients against the cited source, an LLM audit, and weather-aware spray warnings.",
+      "Treatments are labelled Verified, Unverified (web) or AI general knowledge, and the Urdu advice is built mostly by code to avoid invented doses.",
+      "Built a vanilla JS Urdu (RTL) dashboard with live agent progress and deployed it on Render. Built solo for a hackathon."
+    ],
+    repoLink: "https://github.com/abdulwaqar20/KisaanAI",
+    demoLink: "https://kisaanai-3ba1.onrender.com/"
   }
 ];
 
@@ -423,7 +453,14 @@ function openModal(index) {
   // Demo link hook
   const demoBtn = document.getElementById("modal-demo-btn");
   if (demoBtn) {
-    demoBtn.href = proj.demoLink;
+    if (proj.demoLink) {
+      demoBtn.href = proj.demoLink;
+      demoBtn.target = "_blank";
+      demoBtn.rel = "noopener noreferrer";
+      demoBtn.style.display = "";
+    } else {
+      demoBtn.style.display = "none";
+    }
   }
 
   const repoBtn = document.getElementById("modal-repo-btn");
