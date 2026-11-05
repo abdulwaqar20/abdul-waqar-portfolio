@@ -26,7 +26,8 @@ const projectsData = [
       "Handled the failure path: after two rejections the run stops and returns the last draft marked as not approved, and a strict-reviewer mode lets me test it.",
       "Built a live FastAPI dashboard that streams each node and shows the outline, draft, reviewer feedback, retry count, final status and the graph."
     ],
-    repoLink: "https://github.com/abdulwaqar20/Blog-Agents"
+    repoLink: "https://github.com/abdulwaqar20/Blog-Agents",
+    demoLink: "https://blog-agents.onrender.com/"
   },
   {
     title: "Tool-Using Research Agent",
@@ -123,18 +124,19 @@ const projectsData = [
     ],
     repoLink: "https://github.com/abdulwaqar20/GPT2-From-Scratch"
   },
-    {
+      {
     title: "KisaanAI - Multi-Agent Crop Doctor",
     category: "llm",
     tags: ["Python", "FastAPI", "Groq", "RAG", "Urdu TTS"],
     image: "assets/kisaanai.png",
-    description: "A multi-agent crop doctor for Pakistani farmers. The farmer sends a leaf photo and an Urdu voice note, and five agents diagnose the problem, look up sourced treatments, verify them for safety and weather, and reply in spoken Urdu.",
+    description: "1st place winner at the NYLP x AI Hackathon 2026 (Building AI Products). A multi-agent crop doctor for Pakistani farmers: the farmer sends a leaf photo and an Urdu voice note, and five agents diagnose the problem, look up sourced treatments, verify them for safety and weather, and reply in spoken Urdu.",
     highlights: [
+      "Won 1st position at the NYLP x AI Hackathon 2026, built solo.",
       "Built a 5-agent pipeline (listener, diagnosis, research, verifier, advisor) using Whisper, gpt-oss-120b and a Qwen vision model through Groq.",
       "Diagnosis uses a 2-3 run majority vote and asks for a clearer photo when unsure, instead of guessing a disease.",
       "Designed a fail-closed verifier: banned-pesticide list, code-based grounding of doses and ingredients against the cited source, an LLM audit, and weather-aware spray warnings.",
       "Treatments are labelled Verified, Unverified (web) or AI general knowledge, and the Urdu advice is built mostly by code to avoid invented doses.",
-      "Built a vanilla JS Urdu (RTL) dashboard with live agent progress and deployed it on Render. Built solo for a hackathon."
+      "Built a vanilla JS Urdu (RTL) dashboard with live agent progress and deployed it on Render."
     ],
     repoLink: "https://github.com/abdulwaqar20/KisaanAI",
     demoLink: "https://kisaanai-3ba1.onrender.com/"
@@ -270,15 +272,7 @@ function initScrollAnimations() {
         if (entry.target.classList.contains("stats-grid")) {
           animateStats();
         }
-        
-        if (entry.target.classList.contains("skills-grid") || entry.target.id === "skills") {
-          animateProgressBars();
-        }
-        
-        if (entry.target.id === "certs" || entry.target.querySelector(".languages-box")) {
-          animateLanguageCircles();
-        }
-        
+                
         // Unobserve once shown
         observer.unobserve(entry.target);
       }
@@ -322,35 +316,59 @@ function animateStats() {
   });
 }
 
-// Skills Progress bars animation
-function animateProgressBars() {
-  const progressBars = document.querySelectorAll(".skill-progress-bar");
-  progressBars.forEach(bar => {
-    const progress = bar.getAttribute("data-progress");
-    bar.style.width = progress;
-  });
-}
+// Certificates grid + lightbox
+(function () {
+  const certificates = [
+    { badge: "1st Place", title: "NYLP x AI Hackathon 2026", sub: "Top 3 Winners • KisaanAI", image: "assets/certificates/nylp-winners.jpeg" },
+    { badge: "Participation", title: "NYLP x AI Hackathon 2026", sub: "Certificate of Participation • NYLP", image: "assets/certificates/nylp-ai-hackathon.png" },
+    { badge: "Training", title: "Generative AI Application Developer Training", sub: "NCEAC-HEC • 2026", image: "assets/certificates/genai-training.jpg" },
+    { badge: "Hackathon", title: "SGTDP Hackathon 2026", sub: "Sofstica Solutions • 48-hour AI Challenge", image: "assets/certificates/sgtdp-hackathon.jpg" },
+    { badge: "Conference", title: "Indus AI Week", sub: "National Youth Leaders Program • Feb 2026", image: "assets/certificates/indus-ai-week.png" },
+    { badge: "Course", title: "Python Programming", sub: "edX • 2025", image: "assets/certificates/python-edx.png" }
+  ];
 
-// Languages Circular progress animation
-function animateLanguageCircles() {
-  const circles = document.querySelectorAll(".lang-circle");
-  circles.forEach(circle => {
-    const percent = parseInt(circle.getAttribute("data-percent"));
-    const progressCircle = circle.querySelector(".circle-progress");
-    
-    if (progressCircle) {
-      const radius = progressCircle.r.baseVal.value;
-      const circumference = 2 * Math.PI * radius; // ~201
-      const offset = circumference - (percent / 100) * circumference;
-      
-      // Force repaint
-      progressCircle.style.strokeDashoffset = circumference;
-      setTimeout(() => {
-        progressCircle.style.strokeDashoffset = offset;
-      }, 50);
-    }
+  const grid = document.getElementById("cert-grid");
+  if (!grid) return;
+
+  grid.innerHTML = certificates.map((c, i) => `
+    <button type="button" class="cert-card glass-card" data-i="${i}">
+      <div class="cert-card-top">
+        <span class="cert-badge">${c.badge}</span>
+        <span class="cert-num">${String(i + 1).padStart(2, "0")}</span>
+      </div>
+      <div class="cert-thumb"><img src="${c.image}" alt="${c.title}" loading="lazy"></div>
+      <h3 class="cert-card-title">${c.title}</h3>
+      <p class="cert-card-sub">${c.sub}</p>
+    </button>
+  `).join("");
+
+  const modal = document.getElementById("cert-modal");
+  const modalImg = document.getElementById("cert-modal-img");
+  const modalTitle = document.getElementById("cert-modal-title");
+
+  function openCert(i) {
+    modalImg.src = certificates[i].image;
+    modalTitle.textContent = certificates[i].title;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCert() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    modalImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  grid.querySelectorAll(".cert-card").forEach(card => {
+    card.addEventListener("click", () => openCert(Number(card.dataset.i)));
   });
-}
+  modal.querySelectorAll("[data-close-cert]").forEach(el => el.addEventListener("click", closeCert));
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && modal.classList.contains("open")) closeCert();
+  });
+})();
 
 // 4. Timeline Swapping
 function switchTimeline(type) {
